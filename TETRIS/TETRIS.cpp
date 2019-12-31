@@ -6,7 +6,7 @@ void gotoxy(int x,int y)
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos); 
 }
 
-void Clean_Cussor()	// Ä¿¼­¸¦ Áö¿ì´Â ÇÔ¼ö 
+void Clean_Cussor()	// ì»¤ì„œë¥¼ ì§€ìš°ëŠ” í•¨ìˆ˜ 
 {
 	CONSOLE_CURSOR_INFO cursorInfo = { 0, };
 	cursorInfo.dwSize = 1;
@@ -28,7 +28,7 @@ cl_GameManger::cl_GameManger() : DownKey(false), iStage(1)
 	//OutPrintBlock();
 }
 
-void cl_GameManger::SetPosFirst(int Ypos)	// ºí·ÏÁÂÇ¥¸¦ ½ÃÀÛÁöÁ¡À¸·Î ¿Å±â´Â ÇÔ¼ö 
+void cl_GameManger::SetPosFirst(int Ypos)	// ë¸”ë¡ì¢Œí‘œë¥¼ ì‹œì‘ì§€ì ìœ¼ë¡œ ì˜®ê¸°ëŠ” í•¨ìˆ˜ 
 {
 	iThisXpos = 3;
 	iThisYpos = Ypos;
@@ -82,95 +82,95 @@ void cl_GameManger::ResetMap()
 	iTempNEXT = BS_NONE;
 }
 
-void cl_GameManger::SetIntroColor(int Word, int Color)	// ÀÎÆ®·Î ±ÛÀÚ¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö 
+void cl_GameManger::SetIntroColor(int Word, int Color)	// ì¸íŠ¸ë¡œ ê¸€ìë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ 
 {
 	setcolor(Color, 0);
 	switch(Word)
 	{
 		case WS_T1:
-			gotoxy(4,2);	cout <<  "¡á¡á¡á¡á¡á¡á";
-			gotoxy(4,3);	cout <<  "¡á¡á¡á¡á¡á¡á";
-			gotoxy(4,4);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(4,5);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(4,6);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(4,7);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(4,8); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(4,9); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(4,10); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(4,11); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
+			gotoxy(4,2);	cout <<  "â– â– â– â– â– â– ";
+			gotoxy(4,3);	cout <<  "â– â– â– â– â– â– ";
+			gotoxy(4,4);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(4,5);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(4,6);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(4,7);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(4,8); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(4,9); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(4,10); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(4,11); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
 			break;                               
 		case WS_E:                            
-			gotoxy(18,2);	cout <<	"¡á¡á¡á¡á¡á";
-			gotoxy(18,3);	cout <<	"¡á¡á¡á¡á¡á";
-			gotoxy(18,4);	cout <<	"¡á¡á¡¡¡¡¡¡";
-			gotoxy(18,5);	cout <<	"¡á¡á¡¡¡¡¡¡";
-			gotoxy(18,6);	cout <<	"¡á¡á¡á¡á¡á";
-			gotoxy(18,7);	cout <<	"¡á¡á¡á¡á¡á";
-			gotoxy(18,8); 	cout <<	"¡á¡á¡¡¡¡¡¡";
-			gotoxy(18,9); 	cout <<	"¡á¡á¡¡¡¡¡¡";
-			gotoxy(18,10); 	cout <<	"¡á¡á¡á¡á¡á";
-			gotoxy(18,11); 	cout <<	"¡á¡á¡á¡á¡á";
+			gotoxy(18,2);	cout <<	"â– â– â– â– â– ";
+			gotoxy(18,3);	cout <<	"â– â– â– â– â– ";
+			gotoxy(18,4);	cout <<	"â– â– ã€€ã€€ã€€";
+			gotoxy(18,5);	cout <<	"â– â– ã€€ã€€ã€€";
+			gotoxy(18,6);	cout <<	"â– â– â– â– â– ";
+			gotoxy(18,7);	cout <<	"â– â– â– â– â– ";
+			gotoxy(18,8); 	cout <<	"â– â– ã€€ã€€ã€€";
+			gotoxy(18,9); 	cout <<	"â– â– ã€€ã€€ã€€";
+			gotoxy(18,10); 	cout <<	"â– â– â– â– â– ";
+			gotoxy(18,11); 	cout <<	"â– â– â– â– â– ";
 			break;                               
 		case WS_T2:                           
-			gotoxy(30,2);	cout <<  "¡á¡á¡á¡á¡á¡á";
-			gotoxy(30,3);	cout <<  "¡á¡á¡á¡á¡á¡á";
-			gotoxy(30,4);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(30,5);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(30,6);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(30,7);	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(30,8); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(30,9); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(30,10); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(30,11); 	cout <<  "¡¡¡¡¡á¡á¡¡¡¡";
+			gotoxy(30,2);	cout <<  "â– â– â– â– â– â– ";
+			gotoxy(30,3);	cout <<  "â– â– â– â– â– â– ";
+			gotoxy(30,4);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(30,5);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(30,6);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(30,7);	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(30,8); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(30,9); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(30,10); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(30,11); 	cout <<  "ã€€ã€€â– â– ã€€ã€€";
 			break;                               
 		case WS_R:                            
-			gotoxy(44,2);	cout <<	"¡á¡á¡á¡á¡á¡¡¡¡";
-			gotoxy(44,3);	cout <<	"¡á¡á¡á¡á¡á¡á¡¡";
-			gotoxy(44,4);	cout <<	"¡á¡á¡¡¡¡¡á¡á¡¡";
-			gotoxy(44,5);	cout <<	"¡á¡á¡¡¡¡¡á¡á¡¡";
-			gotoxy(44,6);	cout <<	"¡á¡á¡á¡á¡á¡á¡¡";
-			gotoxy(44,7);	cout <<	"¡á¡á¡á¡á¡á¡¡¡¡";
-			gotoxy(44,8); 	cout <<	"¡á¡á¡¡¡á¡á¡¡¡¡";
-			gotoxy(44,9); 	cout <<	"¡á¡á¡¡¡¡¡á¡á¡¡";
-			gotoxy(44,10); 	cout <<	"¡á¡á¡¡¡¡¡¡¡á¡á";
-			gotoxy(44,11); 	cout <<	"¡á¡á¡¡¡¡¡¡¡á¡á";
+			gotoxy(44,2);	cout <<	"â– â– â– â– â– ã€€ã€€";
+			gotoxy(44,3);	cout <<	"â– â– â– â– â– â– ã€€";
+			gotoxy(44,4);	cout <<	"â– â– ã€€ã€€â– â– ã€€";
+			gotoxy(44,5);	cout <<	"â– â– ã€€ã€€â– â– ã€€";
+			gotoxy(44,6);	cout <<	"â– â– â– â– â– â– ã€€";
+			gotoxy(44,7);	cout <<	"â– â– â– â– â– ã€€ã€€";
+			gotoxy(44,8); 	cout <<	"â– â– ã€€â– â– ã€€ã€€";
+			gotoxy(44,9); 	cout <<	"â– â– ã€€ã€€â– â– ã€€";
+			gotoxy(44,10); 	cout <<	"â– â– ã€€ã€€ã€€â– â– ";
+			gotoxy(44,11); 	cout <<	"â– â– ã€€ã€€ã€€â– â– ";
 			break;                               
 		case WS_I:
-			gotoxy(60,2);	cout <<	"¡á¡á¡á¡á¡á¡á";
-			gotoxy(60,3);	cout <<	"¡á¡á¡á¡á¡á¡á";
-			gotoxy(60,4);	cout <<	"¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(60,5);	cout <<	"¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(60,6);	cout <<	"¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(60,7);	cout <<	"¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(60,8); 	cout <<	"¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(60,9); 	cout <<	"¡¡¡¡¡á¡á¡¡¡¡";
-			gotoxy(60,10); 	cout <<	"¡á¡á¡á¡á¡á¡á";
-			gotoxy(60,11); 	cout <<	"¡á¡á¡á¡á¡á¡á";
+			gotoxy(60,2);	cout <<	"â– â– â– â– â– â– ";
+			gotoxy(60,3);	cout <<	"â– â– â– â– â– â– ";
+			gotoxy(60,4);	cout <<	"ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(60,5);	cout <<	"ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(60,6);	cout <<	"ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(60,7);	cout <<	"ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(60,8); 	cout <<	"ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(60,9); 	cout <<	"ã€€ã€€â– â– ã€€ã€€";
+			gotoxy(60,10); 	cout <<	"â– â– â– â– â– â– ";
+			gotoxy(60,11); 	cout <<	"â– â– â– â– â– â– ";
 			break;
 		case WS_S:
-			gotoxy(74,2);	cout <<	"¡¡¡á¡á¡á¡á¡á";
-			gotoxy(74,3);	cout <<	"¡á¡á¡á¡á¡á¡á";
-			gotoxy(74,4);	cout <<	"¡á¡á¡¡¡¡¡¡¡¡";
-			gotoxy(74,5);	cout <<	"¡á¡á¡¡¡¡¡¡¡¡";
-			gotoxy(74,6);	cout <<	"¡á¡á¡á¡á¡á¡¡";
-			gotoxy(74,7);	cout <<	"¡¡¡á¡á¡á¡á¡á";
-			gotoxy(74,8); 	cout <<	"¡¡¡¡¡¡¡¡¡á¡á";
-			gotoxy(74,9); 	cout <<	"¡¡¡¡¡¡¡¡¡á¡á";
-			gotoxy(74,10); 	cout <<	"¡á¡á¡á¡á¡á¡á";
-			gotoxy(74,11); 	cout <<	"¡á¡á¡á¡á¡á¡¡";
+			gotoxy(74,2);	cout <<	"ã€€â– â– â– â– â– ";
+			gotoxy(74,3);	cout <<	"â– â– â– â– â– â– ";
+			gotoxy(74,4);	cout <<	"â– â– ã€€ã€€ã€€ã€€";
+			gotoxy(74,5);	cout <<	"â– â– ã€€ã€€ã€€ã€€";
+			gotoxy(74,6);	cout <<	"â– â– â– â– â– ã€€";
+			gotoxy(74,7);	cout <<	"ã€€â– â– â– â– â– ";
+			gotoxy(74,8); 	cout <<	"ã€€ã€€ã€€ã€€â– â– ";
+			gotoxy(74,9); 	cout <<	"ã€€ã€€ã€€ã€€â– â– ";
+			gotoxy(74,10); 	cout <<	"â– â– â– â– â– â– ";
+			gotoxy(74,11); 	cout <<	"â– â– â– â– â– ã€€";
 			break;
 	}
 	setcolor(0, 0);
 	//Clean_Cussor();
 }
 
-void cl_GameManger::OutPrintIntro()	// ÀÎÆ®·Î¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö 
+void cl_GameManger::OutPrintIntro()	// ì¸íŠ¸ë¡œë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ 
 {
 	Clean_Cussor();
 	system("mode con cols=91 lines=18");
 	setcolor(15, 0);gotoxy(37,14);cout << "- Press AnyKey -";
 	int COLOR[6] = {10, 11, 12, 13, 14, 15};
-	gotoxy(4,13);	cout << "¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡MADE BY GarryMilk";
+	gotoxy(4,13);	cout << "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€MADE BY GarryMilk";
 	while(true)
 	{
 		SetIntroColor(WS_T1, COLOR[0]);
@@ -193,43 +193,43 @@ void cl_GameManger::OutPrintIntro()	// ÀÎÆ®·Î¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
 	return;
 }
 
-void cl_GameManger::OutPrintMap()	// ¸ÊÀ» ¸ÊÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+void cl_GameManger::OutPrintMap()	// ë§µì„ ë§µì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 {
-	// xÁÂÇ¥ : 3 ~ 22	YÁÂÇ¥ : 1 ~ 20 	ºí·Ï ½ÃÀÛ ÁÂÇ¥ :  x(8), y(1)
-	// NEXT ÁÂÇ¥ : x 24 ~ 30	y 2 ~ 5
-	// SAVE ÁÂÇ¥ : x 24 ~ 30	y 9 ~ 12
+	// xì¢Œí‘œ : 3 ~ 22	Yì¢Œí‘œ : 1 ~ 20 	ë¸”ë¡ ì‹œì‘ ì¢Œí‘œ :  x(8), y(1)
+	// NEXT ì¢Œí‘œ : x 24 ~ 30	y 2 ~ 5
+	// SAVE ì¢Œí‘œ : x 24 ~ 30	y 9 ~ 12
 	system("mode con cols=61 lines=22");
-	cout << "¡á¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡á¡¡NEXT¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡á¡á¡¡¡¡¡¡¡¡ºí·Ï µ¹¸®±â¡¡¡¡¡¡ " << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡â¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¿ŞÂÊ¡¡¢·¡¡¡¡¡¡¢¹¡¡¿À¸¥ÂÊ" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡SAVE¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡ä¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡»¡¸® ³»¸®±â¡¡¡¡¡¡ " << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡ ¡¡¡¡¡¡¡¡¡¡¡¡¡¡ " << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡ SPACE BAR¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡ ÇÑ¹ø¿¡ ³»¸®±â" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡S  ºí·Ï ÀúÀåÇÏ±â ¡¡ " << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡LEVEL ¡¡¡¡¡¡ "<< endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡" << iStage << "¡¡¡¡¡¡ ¡¡D  ºí·Ï ºÒ·¯¿À±â" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡P¡¡°ÔÀÓ ¸ØÃß±â¡¡" << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡SCORE¡¡ ¡¡¡¡ " << endl;
-	cout << "¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡K¡¡°ÔÀÓ Á¾·áÇÏ±â¡¡" << endl;
-	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡";                               
+	cout << "â– ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚â– ã€€NEXTã€€â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– â– â– â– â– ã€€ã€€ã€€ã€€ë¸”ë¡ ëŒë¦¬ê¸°ã€€ã€€ã€€ " << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ã€€â–³ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ì™¼ìª½ã€€â—ã€€ã€€ã€€â–·ã€€ì˜¤ë¥¸ìª½" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– â– â– â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€SAVEã€€â– ã€€ã€€ã€€ã€€ã€€ã€€â–½ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– â– â– â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ë¹¨ë¦¬ ë‚´ë¦¬ê¸°ã€€ã€€ã€€ " << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ ã€€ã€€ã€€ã€€ã€€ã€€ã€€ " << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ SPACE BARã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ í•œë²ˆì— ë‚´ë¦¬ê¸°" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– â– â– â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€S  ë¸”ë¡ ì €ì¥í•˜ê¸° ã€€ " << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€LEVEL ã€€ã€€ã€€ "<< endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€" << iStage << "ã€€ã€€ã€€ ã€€D  ë¸”ë¡ ë¶ˆëŸ¬ì˜¤ê¸°" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€Pã€€ê²Œì„ ë©ˆì¶”ê¸°ã€€" << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€SCOREã€€ ã€€ã€€ " << endl;
+	cout << "â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€Kã€€ê²Œì„ ì¢…ë£Œí•˜ê¸°ã€€" << endl;
+	cout << "â– â– â– â– â– â– â– â– â– â– â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€";                               
 }         
 
-bool cl_GameManger::CheckingMap()	// ¸ÊÀ» ºñ±³ ¹× ÀçÃâ·ÂÇÏ´Â ÇÔ¼ö                                   
+bool cl_GameManger::CheckingMap()	// ë§µì„ ë¹„êµ ë° ì¬ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜                                   
 {
 	if(OutPrintScore() == false)
 	{
 		return true;
 	}
-	ReprintNextSave();	// ´ÙÀ½ºí·Ï°ú ÀúÀåºí·ÏÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+	ReprintNextSave();	// ë‹¤ìŒë¸”ë¡ê³¼ ì €ì¥ë¸”ë¡ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 	for(int i = 3; i < 24; i++)
 	{
 		for(int j = 0; j < 10; j++)
@@ -241,33 +241,33 @@ bool cl_GameManger::CheckingMap()	// ¸ÊÀ» ºñ±³ ¹× ÀçÃâ·ÂÇÏ´Â ÇÔ¼ö
 				//cTempMap[i][j] = BC_MapCircle;
 				RePrintStartLine(j);
 			}
-			if(cMap[i][j] != cTempMap[i][j] || PauseCheck == true)	// ±âÁ¸¿¡ ÀúÀåµÈ ¸ÊÀÌ ¹Ù²ñ¸Ê°ú ´Ù¸£¸é ÀçÃâ·Â 
+			if(cMap[i][j] != cTempMap[i][j] || PauseCheck == true)	// ê¸°ì¡´ì— ì €ì¥ëœ ë§µì´ ë°”ë€œë§µê³¼ ë‹¤ë¥´ë©´ ì¬ì¶œë ¥ 
 			{
 				//cout <<"i:" << i <<"	" <<"j :" << j;
-				RePrintMap(j, i);	// ¹è¿­ÀÇ °ªÀ» º¸³»¼­ À§Ä¡¸¦ Ç¥½ÃÇÏ´Â ¹æ½ÄÀÓ.. 
-				cMap[i][j] = cTempMap[i][j];			// ¿ø·¡¸ÊÀ¸·Î µ¹·Á³õ´Â´Ù. 
+				RePrintMap(j, i);	// ë°°ì—´ì˜ ê°’ì„ ë³´ë‚´ì„œ ìœ„ì¹˜ë¥¼ í‘œì‹œí•˜ëŠ” ë°©ì‹ì„.. 
+				cMap[i][j] = cTempMap[i][j];			// ì›ë˜ë§µìœ¼ë¡œ ëŒë ¤ë†“ëŠ”ë‹¤. 
 			}
 		}
 	}
 	return false;
 }
 
-void cl_GameManger::RePrintMap(int Xpos, int Ypos)	// ¸ÊÀ» ´Ù½Ã Ãâ·ÂÇÏ´Â ÇÔ¼ö
+void cl_GameManger::RePrintMap(int Xpos, int Ypos)	// ë§µì„ ë‹¤ì‹œ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 {
-	// xÁÂÇ¥ : 3 ~ 22	YÁÂÇ¥ : 1 ~ 20 	ºí·Ï ½ÃÀÛ ÁÂÇ¥ :  x(8), y(1)
-	// NEXT ÁÂÇ¥ : x 24 ~ 30	y 2 ~ 5
-	// SAVE ÁÂÇ¥ : x 24 ~ 30	y 9 ~ 12
+	// xì¢Œí‘œ : 3 ~ 22	Yì¢Œí‘œ : 1 ~ 20 	ë¸”ë¡ ì‹œì‘ ì¢Œí‘œ :  x(8), y(1)
+	// NEXT ì¢Œí‘œ : x 24 ~ 30	y 2 ~ 5
+	// SAVE ì¢Œí‘œ : x 24 ~ 30	y 9 ~ 12
 	gotoxy(Xpos * 2 + 2, Ypos - 3);
 	//cout << "y :" << Ypos;
 	ColorBlockPrint(cTempMap[Ypos][Xpos]);
 }
 
-void cl_GameManger::ReprintNextSave()	// ´ÙÀ½ºí·Ï°ú ÀúÀåºí·ÏÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö 
+void cl_GameManger::ReprintNextSave()	// ë‹¤ìŒë¸”ë¡ê³¼ ì €ì¥ë¸”ë¡ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ 
 {
 //	static bool First = false;
 	int xPos, yPos;
-	// NEXT ÁÂÇ¥ : x 24 ~ 30	y 2 ~ 5
-	// SAVE ÁÂÇ¥ : x 24 ~ 30	y 9 ~ 12
+	// NEXT ì¢Œí‘œ : x 24 ~ 30	y 2 ~ 5
+	// SAVE ì¢Œí‘œ : x 24 ~ 30	y 9 ~ 12
 	if(iNextBlock != iTempNEXT || First == false || PauseCheck == true)
 	{
 		xPos = 24;
@@ -302,47 +302,47 @@ void cl_GameManger::ReprintNextSave()	// ´ÙÀ½ºí·Ï°ú ÀúÀåºí·ÏÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
 	if(First == false)First = true;
 }
 
-void cl_GameManger::ChangeNextBlock()	// ´ÙÀ½ºí·ÏÀ» Á¤ÇÏ´Â ÇÔ¼ö
+void cl_GameManger::ChangeNextBlock()	// ë‹¤ìŒë¸”ë¡ì„ ì •í•˜ëŠ” í•¨ìˆ˜
 {
 	srand((unsigned int)time(NULL));
 	
-	bBlockCheck = true;	// ´ÙÀ½ºí·ÏÀÌ È£ÃâµÇ¸é ÇöÀçºí·ÏÀ» È°¼ºÈ­ÇÑ´Ù 
-	bBlockActive = false;	// ¹èÁ¤µÌ´Ù´Â°Ç ¾ÆÁ÷ ¸Ê¿¡ ºí·ÏÀÌ ¼ÒÈ¯ÀÌ µÇÁö¾Ê¾ÑÀ¸´Ï ¼¼ÆÃÇØÁØ´Ù. 
+	bBlockCheck = true;	// ë‹¤ìŒë¸”ë¡ì´ í˜¸ì¶œë˜ë©´ í˜„ì¬ë¸”ë¡ì„ í™œì„±í™”í•œë‹¤ 
+	bBlockActive = false;	// ë°°ì •ë«ë‹¤ëŠ”ê±´ ì•„ì§ ë§µì— ë¸”ë¡ì´ ì†Œí™˜ì´ ë˜ì§€ì•Šì•—ìœ¼ë‹ˆ ì„¸íŒ…í•´ì¤€ë‹¤. 
 	
-	if(bFirstStart == false)	// Ã³À½ È£ÃâµÇ¸é ´ÙÀ½ºí·ÏÀ» ÃÊ±âÈ­ÇÑ´Ù 
+	if(bFirstStart == false)	// ì²˜ìŒ í˜¸ì¶œë˜ë©´ ë‹¤ìŒë¸”ë¡ì„ ì´ˆê¸°í™”í•œë‹¤ 
 	{
 		iNextBlock = rand() % 7 + 1;
 		bFirstStart = true;
 	}
-	iTempNEXT = iNextBlock;	// Àüºí·Ï¿¡ ÃÊ±âÈ­Àü ºí·Ï ÀÔ·Â 
-	iThisBlock = iNextBlock;	// ÇöÀçºí·Ï¿¡ ÃÊ±âÈ­Àü ºí·Ï ÀÔ·Â 
+	iTempNEXT = iNextBlock;	// ì „ë¸”ë¡ì— ì´ˆê¸°í™”ì „ ë¸”ë¡ ì…ë ¥ 
+	iThisBlock = iNextBlock;	// í˜„ì¬ë¸”ë¡ì— ì´ˆê¸°í™”ì „ ë¸”ë¡ ì…ë ¥ 
 	SetBlock(cThisBlock, iNextBlock, BT_0);
 	eBlock_Turn = BT_0;
 	
 	int iDex1, iDex2, iTemp;
 	for(int i = 0 ; i < 10; i++)
 	{
-		// iDex1,2 °ª¿¡ 45 ÀÌÇÏÀÇ ·£´ı°ª ºÎ¿©
+		// iDex1,2 ê°’ì— 45 ì´í•˜ì˜ ëœë¤ê°’ ë¶€ì—¬
 		iDex1 = rand() % 7;
 		iDex2 = rand() % 7;
 		
-		// ¼­·Î ¹Ù²ãÁØ´Ù
+		// ì„œë¡œ ë°”ê¿”ì¤€ë‹¤
 		iTemp = iNumberBlock[iDex1];
 		iNumberBlock[iDex1] = iNumberBlock[iDex2];
 		iNumberBlock[iDex2] = iTemp;
 	}
-	iNextBlock = iNumberBlock[rand() % 7];	// ´ÙÀ½ºí·Ï ÃÊ±âÈ­ 
+	iNextBlock = iNumberBlock[rand() % 7];	// ë‹¤ìŒë¸”ë¡ ì´ˆê¸°í™” 
 	SetBlock(cNEXT, iNextBlock, BT_0);
 	return;
 }
 
-void cl_GameManger::SetBlock(char cBlock[5][5], int iBlock, Block_Turn iBlock_s)		// ºí·Ï ¸ğ¾çÀ» º¯¼ö¿¡ ÀÔ·ÂÇÏ´Â ÇÔ¼ö 
+void cl_GameManger::SetBlock(char cBlock[5][5], int iBlock, Block_Turn iBlock_s)		// ë¸”ë¡ ëª¨ì–‘ì„ ë³€ìˆ˜ì— ì…ë ¥í•˜ëŠ” í•¨ìˆ˜ 
 {
 	switch(iBlock)
 	{
 		case BS_SQUARE:
 		//	iThisBlock = BS_SQUARE;
-			INPUT_BLOCK(cBlock, Block_Square, iBlock_s);	// INPUT_BLOCK() ¸ŞÅ©·Î value.h 
+			INPUT_BLOCK(cBlock, Block_Square, iBlock_s);	// INPUT_BLOCK() ë©”í¬ë¡œ value.h 
 			break;
 			
 		case BS_STICK:
@@ -377,9 +377,9 @@ void cl_GameManger::SetBlock(char cBlock[5][5], int iBlock, Block_Turn iBlock_s)
 	}
 }
 
-void cl_GameManger::BlockRePosition()	// ÇöÀçºí·Ï À§Ä¡¸¦ ´Ù½Ã ³ªÅ¸³»´Â ÇÔ¼ö
+void cl_GameManger::BlockRePosition()	// í˜„ì¬ë¸”ë¡ ìœ„ì¹˜ë¥¼ ë‹¤ì‹œ ë‚˜íƒ€ë‚´ëŠ” í•¨ìˆ˜
 {
-	for(int i = 0; i < 24; i++)		// ºí·Ï ÀÎ½Ä ¸ÊÀº ºí·ÏÀÌ ³»·Á¿Ã‹š ±âÁ¸¸Ê¿¡ ÀÖ´ø ºí·ÏÀ» Áö¿î´Ù. 
+	for(int i = 0; i < 24; i++)		// ë¸”ë¡ ì¸ì‹ ë§µì€ ë¸”ë¡ì´ ë‚´ë ¤ì˜¬ë–„ ê¸°ì¡´ë§µì— ìˆë˜ ë¸”ë¡ì„ ì§€ìš´ë‹¤. 
 	{
 		for(int j = 0; j < 10; j++)
 		{
@@ -391,7 +391,7 @@ void cl_GameManger::BlockRePosition()	// ÇöÀçºí·Ï À§Ä¡¸¦ ´Ù½Ã ³ªÅ¸³»´Â ÇÔ¼ö
 	{
 		for(int j = 0; j < 4; j++)
 		{
-			if(cThisBlock[i][j] != BC_NONE) 	// ¸¸¾à ºóÄ­ÀÌ ¾Æ´Ï¸é ´ëÀÔ 
+			if(cThisBlock[i][j] != BC_NONE) 	// ë§Œì•½ ë¹ˆì¹¸ì´ ì•„ë‹ˆë©´ ëŒ€ì… 
 			{
 				cTempMap[iThisYpos + i][iThisXpos + j] = cThisBlock[i][j];	
 				cThisBlockMap[iThisYpos + i][iThisXpos + j] = cThisBlock[i][j];	
@@ -405,38 +405,38 @@ void cl_GameManger::ColorBlockPrint(char Color)
 	switch(Color)
 	{
 		case '0':
-			cout << "¡¡";
+			cout << "ã€€";
 			break;
 		case '1':
 			setcolor(11, 0);
-			cout << "¡á";
+			cout << "â– ";
 			break;
 		case '2':
 			setcolor(12, 0);
-			cout << "¡á";
+			cout << "â– ";
 			break;
 		case '3':
 			setcolor(9, 0);
-			cout << "¡á";
+			cout << "â– ";
 			break;
 		case '4':
 			setcolor(2, 0);
-			cout << "¡á";
+			cout << "â– ";
 			break;
 		case '5':
 			setcolor(13, 0);
-			cout << "¡á";
+			cout << "â– ";
 			break;
 		case '6':
 			setcolor(14, 0);
-			cout << "¡á";
+			cout << "â– ";
 			break;
 		case '7':
 			setcolor(10, 0);
-			cout << "¡á";
+			cout << "â– ";
 			break;
 		case '8':
-			cout << "¡£";
+			cout << "ã€‚";
 			break;
 	}
 	setcolor(7, 0);
@@ -445,11 +445,11 @@ void cl_GameManger::ColorBlockPrint(char Color)
 void cl_GameManger::RePrintStartLine(int Xpos)
 {
 	gotoxy(Xpos*2 + 2, 0);
-	cout << "¡£";
+	cout << "ã€‚";
 	return;
 }
 
-bool cl_GameManger::OutPrintScore()	// Á¡¼öÈ­¸éÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+bool cl_GameManger::OutPrintScore()	// ì ìˆ˜í™”ë©´ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 {
 	if(iScore >= 2500 + (2500 * iStage))
 	{
@@ -521,11 +521,11 @@ void cl_GameManger::OutPrintBlock()
 	system("pause");
 }
 
-bool cl_GameManger::PrintBlock() 	// ºí·ÏÀ» ±×¸®´Â ÇÔ¼ö 
+bool cl_GameManger::PrintBlock() 	// ë¸”ë¡ì„ ê·¸ë¦¬ëŠ” í•¨ìˆ˜ 
 {
-	// xÁÂÇ¥ : 3 ~ 22	YÁÂÇ¥ : 1 ~ 20 	ºí·Ï ½ÃÀÛ ÁÂÇ¥ :  x(8), y(1)
-	// NEXT ÁÂÇ¥ : x 24 ~ 30	y 2 ~ 5
-	// SAVE ÁÂÇ¥ : x 24 ~ 30	y 9 ~ 12
+	// xì¢Œí‘œ : 3 ~ 22	Yì¢Œí‘œ : 1 ~ 20 	ë¸”ë¡ ì‹œì‘ ì¢Œí‘œ :  x(8), y(1)
+	// NEXT ì¢Œí‘œ : x 24 ~ 30	y 2 ~ 5
+	// SAVE ì¢Œí‘œ : x 24 ~ 30	y 9 ~ 12
 	switch(iThisBlock)
 	{
 		case BS_STICK:
@@ -545,9 +545,9 @@ bool cl_GameManger::PrintBlock() 	// ºí·ÏÀ» ±×¸®´Â ÇÔ¼ö
 	{
 		for(int j = 0; j < 4; j++)
 		{
-			if(cThisBlock[i][j] != BC_NONE) 	// ¸¸¾à ºóÄ­ÀÌ ¾Æ´Ï¸é ´ëÀÔ 
+			if(cThisBlock[i][j] != BC_NONE) 	// ë§Œì•½ ë¹ˆì¹¸ì´ ì•„ë‹ˆë©´ ëŒ€ì… 
 			{
-				if(!(cTempMap[iThisYpos + i][iThisXpos + j] == BC_NONE || cTempMap[iThisYpos + i][iThisXpos + j] == BC_MapCircle))	// ½ÃÀÛÄ­¿¡ ºí·ÏÀÌ ÀÖÀ¸¸é °ÔÀÓ¿À¹ö 
+				if(!(cTempMap[iThisYpos + i][iThisXpos + j] == BC_NONE || cTempMap[iThisYpos + i][iThisXpos + j] == BC_MapCircle))	// ì‹œì‘ì¹¸ì— ë¸”ë¡ì´ ìˆìœ¼ë©´ ê²Œì„ì˜¤ë²„ 
 					return false;
 				cTempMap[iThisYpos + i][iThisXpos + j] = cThisBlock[i][j];	
 				cThisBlockMap[iThisYpos + i][iThisXpos + j] = cThisBlock[i][j];				
@@ -559,20 +559,20 @@ bool cl_GameManger::PrintBlock() 	// ºí·ÏÀ» ±×¸®´Â ÇÔ¼ö
 	return true;
 }
 
- bool cl_GameManger::BlockDown()	// ºí·ÏÀÌ ³»·Á°¡´Â ÇÔ¼ö 
+ bool cl_GameManger::BlockDown()	// ë¸”ë¡ì´ ë‚´ë ¤ê°€ëŠ” í•¨ìˆ˜ 
 {
-	static int iLate = 0;	// ºí·ÏÀÌ ³»·Á¿À´Â ½Ã°£ 
+	static int iLate = 0;	// ë¸”ë¡ì´ ë‚´ë ¤ì˜¤ëŠ” ì‹œê°„ 
 	if(iLate != iStageSpeed)
 	{
 		iLate++;
 		return true;
 	}
-	else iLate = 0;	// ºí·ÏÀÌ ³»·Á¿À´Â ½Ã°£ 
+	else iLate = 0;	// ë¸”ë¡ì´ ë‚´ë ¤ì˜¤ëŠ” ì‹œê°„ 
 	
 	
-	if(BlockCollisoinCheck())	// ºí·ÏÀÌ Ãæµ¹ÇÏ¸é
+	if(BlockCollisoinCheck())	// ë¸”ë¡ì´ ì¶©ëŒí•˜ë©´
 	{
-		for(int i = 0; i < 24; i++)		// ºí·Ï ÀÎ½Ä ¸ÊÀº ºí·ÏÀÌ ³»·Á¿Ã‹š ±âÁ¸¸Ê¿¡ ÀÖ´ø ºí·ÏÀ» Áö¿î´Ù. 
+		for(int i = 0; i < 24; i++)		// ë¸”ë¡ ì¸ì‹ ë§µì€ ë¸”ë¡ì´ ë‚´ë ¤ì˜¬ë–„ ê¸°ì¡´ë§µì— ìˆë˜ ë¸”ë¡ì„ ì§€ìš´ë‹¤. 
 		{
 			for(int j = 0; j < 10; j++)
 			{
@@ -582,9 +582,9 @@ bool cl_GameManger::PrintBlock() 	// ºí·ÏÀ» ±×¸®´Â ÇÔ¼ö
 		}
 		return false; 	
 	}
-	iThisYpos++;	// Y°ªÀ» Áõ°¡½ÃÄÑ¼­ ÁÂÇ¥¸¦ ÇÑÄ­ ³»¸°´Ù.
+	iThisYpos++;	// Yê°’ì„ ì¦ê°€ì‹œì¼œì„œ ì¢Œí‘œë¥¼ í•œì¹¸ ë‚´ë¦°ë‹¤.
 	
-	for(int i = 0; i < 24; i++)		// ºí·Ï ÀÎ½Ä ¸ÊÀº ºí·ÏÀÌ ³»·Á¿Ã‹š ±âÁ¸¸Ê¿¡ ÀÖ´ø ºí·ÏÀ» Áö¿î´Ù. 
+	for(int i = 0; i < 24; i++)		// ë¸”ë¡ ì¸ì‹ ë§µì€ ë¸”ë¡ì´ ë‚´ë ¤ì˜¬ë–„ ê¸°ì¡´ë§µì— ìˆë˜ ë¸”ë¡ì„ ì§€ìš´ë‹¤. 
 	{
 		for(int j = 0; j < 10; j++)
 		{
@@ -595,7 +595,7 @@ bool cl_GameManger::PrintBlock() 	// ºí·ÏÀ» ±×¸®´Â ÇÔ¼ö
 	{
 		for(int j = 0; j < 4; j++)
 		{
-			if(cThisBlock[i][j] != BC_NONE) 	// ¸¸¾à ºóÄ­ÀÌ ¾Æ´Ï¸é ´ëÀÔ 
+			if(cThisBlock[i][j] != BC_NONE) 	// ë§Œì•½ ë¹ˆì¹¸ì´ ì•„ë‹ˆë©´ ëŒ€ì… 
 			{
 				cTempMap[iThisYpos + i][iThisXpos + j] = cThisBlock[i][j];	
 				cThisBlockMap[iThisYpos + i][iThisXpos + j] = cThisBlock[i][j];	
@@ -605,7 +605,7 @@ bool cl_GameManger::PrintBlock() 	// ºí·ÏÀ» ±×¸®´Â ÇÔ¼ö
 	return true;
 }
 
-bool cl_GameManger::BlockCollisoinCheck()	// ºí·Ï Ãæµ¹ Ã¼Å© ºí·ÏÀÌ Ãæµ¹ÇÏ¸é true ¹İÈ¯ 
+bool cl_GameManger::BlockCollisoinCheck()	// ë¸”ë¡ ì¶©ëŒ ì²´í¬ ë¸”ë¡ì´ ì¶©ëŒí•˜ë©´ true ë°˜í™˜ 
 {
 	for(int i = 0; i < 4; i++) 
 	{
@@ -614,12 +614,12 @@ bool cl_GameManger::BlockCollisoinCheck()	// ºí·Ï Ãæµ¹ Ã¼Å© ºí·ÏÀÌ Ãæµ¹ÇÏ¸é true
 			if(!(cThisBlockMap[iThisYpos + i][iThisXpos + j] == BC_NONE || cThisBlockMap[iThisYpos + i][iThisXpos + j] == BC_MapCircle) && iThisYpos + i < 24)	
 			{
 				//cout << "i : " << i << " j : " << j;
-				if(iThisYpos + i == 23 && iThisXpos + j < 10)	// ºí·ÏºÎºĞÀÌ ¶¥¿¡´êÀ¸¸é 
+				if(iThisYpos + i == 23 && iThisXpos + j < 10)	// ë¸”ë¡ë¶€ë¶„ì´ ë•…ì—ë‹¿ìœ¼ë©´ 
 				{
 				//	cout << "bug" << iThisYpos + i ;
 					return true; 
 				}
-				if(!(cEndMap[iThisYpos + i + 1][iThisXpos + j] == BC_NONE || cEndMap[iThisYpos + i + 1][iThisXpos + j] == BC_MapCircle) && iThisXpos + j < 10)	// ¹Ì¸® ½×¿©ÀÖ´Â ºí·ÏÀÌ ÀÖÀ¸¸é 
+				if(!(cEndMap[iThisYpos + i + 1][iThisXpos + j] == BC_NONE || cEndMap[iThisYpos + i + 1][iThisXpos + j] == BC_MapCircle) && iThisXpos + j < 10)	// ë¯¸ë¦¬ ìŒ“ì—¬ìˆëŠ” ë¸”ë¡ì´ ìˆìœ¼ë©´ 
 				{
 					//cout << iThisYpos + i + 1  << "  " << iThisXpos + j;
 					return true;					
@@ -631,7 +631,7 @@ bool cl_GameManger::BlockCollisoinCheck()	// ºí·Ï Ãæµ¹ Ã¼Å© ºí·ÏÀÌ Ãæµ¹ÇÏ¸é true
 	return false;
 }
 
-void cl_GameManger::KeyInput(unsigned char Key)	// Å°¸¦ ÀÔ·Â¹Ş´Â ÇÔ¼ö
+void cl_GameManger::KeyInput(unsigned char Key)	// í‚¤ë¥¼ ì…ë ¥ë°›ëŠ” í•¨ìˆ˜
 {
 	switch(Key)
 	{
@@ -651,7 +651,7 @@ void cl_GameManger::KeyInput(unsigned char Key)	// Å°¸¦ ÀÔ·Â¹Ş´Â ÇÔ¼ö
 			break;
 		case 80:
 			for(int i = 0; i < 2; i++)
-			if(BlockDown() == false)	// ºí·ÏÀ» ÇÑÄ­ ³»¸®°í Ãæµ¹ÇÏ¸é
+			if(BlockDown() == false)	// ë¸”ë¡ì„ í•œì¹¸ ë‚´ë¦¬ê³  ì¶©ëŒí•˜ë©´
 			{
 				bBlockCheck = false; 
 				bBlockActive = false;
@@ -673,10 +673,10 @@ void cl_GameManger::KeyInput(unsigned char Key)	// Å°¸¦ ÀÔ·Â¹Ş´Â ÇÔ¼ö
 	}
 }
 
-void cl_GameManger::BlockRotation()	// ºí·Ï È¸Àü 
+void cl_GameManger::BlockRotation()	// ë¸”ë¡ íšŒì „ 
 {
 	Block_Turn eTurnTemp = eBlock_Turn;
-	switch(eBlock_Turn)	// ¹æÇâÀüÈ¯ 
+	switch(eBlock_Turn)	// ë°©í–¥ì „í™˜ 
 	{
 		case BT_0:
 			eBlock_Turn = BT_90;
@@ -698,8 +698,8 @@ void cl_GameManger::BlockRotation()	// ºí·Ï È¸Àü
 		{
 			if(cRotationBlock[i][j] != BC_NONE)
 			{
-				if(!(cEndMap[iThisYpos + i][iThisXpos + j] == BC_NONE || cEndMap[iThisYpos + i][iThisXpos + j] == BC_MapCircle))	// ¸¸¾à È¸ÀüµÈ ºí·Ï ÀÌ µé¾î°¥ Ä­¿¡
-				{														// ´Ù¸¥ºí·ÏÀÌ ÀÖÀ¸¸é È¸ÀüÃë¼Ò 
+				if(!(cEndMap[iThisYpos + i][iThisXpos + j] == BC_NONE || cEndMap[iThisYpos + i][iThisXpos + j] == BC_MapCircle))	// ë§Œì•½ íšŒì „ëœ ë¸”ë¡ ì´ ë“¤ì–´ê°ˆ ì¹¸ì—
+				{														// ë‹¤ë¥¸ë¸”ë¡ì´ ìˆìœ¼ë©´ íšŒì „ì·¨ì†Œ 
 					 eBlock_Turn = eTurnTemp;
 					 return;
 				}
@@ -755,10 +755,10 @@ void cl_GameManger::BlockRight()
 	BlockRePosition();
 }
 
-void cl_GameManger::BlockSave()	// ºí·ÏÀ» ¼¼ÀÌºêÇÏ´Â Å° ÇÔ¼ö
+void cl_GameManger::BlockSave()	// ë¸”ë¡ì„ ì„¸ì´ë¸Œí•˜ëŠ” í‚¤ í•¨ìˆ˜
 {
-	if(Saving == true)return;	// ÀÌ¹Ì ÀúÀåµÈ ºí·ÏÀÌ ÀÖÀ¸¸é ¸®ÅÏ 
-	// ¼¼ÀÌºêºí·Ï¿¡ ÇöÀçºí·Ï ´ëÀÔ 
+	if(Saving == true)return;	// ì´ë¯¸ ì €ì¥ëœ ë¸”ë¡ì´ ìˆìœ¼ë©´ ë¦¬í„´ 
+	// ì„¸ì´ë¸Œë¸”ë¡ì— í˜„ì¬ë¸”ë¡ ëŒ€ì… 
 	eBlock_Turn = BT_0;
 	Block_RESET(cSaveBlock);
 	
@@ -767,14 +767,14 @@ void cl_GameManger::BlockSave()	// ºí·ÏÀ» ¼¼ÀÌºêÇÏ´Â Å° ÇÔ¼ö
 	//BLOCK_SUB(cSaveBlock, cThisBlock);
 	Saving = true;
 	
-	// cTempMap ¿¡ cEndMap °ªÀ» ´ëÀÔÇÏ¸é ¸ÊÀçÃâ·Â ÇÔ¼ö¿¡¼­ ÇöÀçºí·ÏÀÌ »ç¶óÁø´Ù 
+	// cTempMap ì— cEndMap ê°’ì„ ëŒ€ì…í•˜ë©´ ë§µì¬ì¶œë ¥ í•¨ìˆ˜ì—ì„œ í˜„ì¬ë¸”ë¡ì´ ì‚¬ë¼ì§„ë‹¤ 
 	MAP_SUB(cTempMap, cEndMap);
 	MAP_RESET(cThisBlockMap);
-	DownKey = true;	// ´Ù¿îÅ°¸¦ È°¼ºÈ­ÇÏ¸é RunÇÔ¼ö¿¡¼­ ÀÚµ¿À¸·Î ºí·ÏÀÌ ¸Ê¿¡¼­ ¾ø¾îÁø°ÍÀ¸·Î ÆÇÁ¤ÇÑ´Ù. 
+	DownKey = true;	// ë‹¤ìš´í‚¤ë¥¼ í™œì„±í™”í•˜ë©´ Runí•¨ìˆ˜ì—ì„œ ìë™ìœ¼ë¡œ ë¸”ë¡ì´ ë§µì—ì„œ ì—†ì–´ì§„ê²ƒìœ¼ë¡œ íŒì •í•œë‹¤. 
 	return;
 }
 
-void cl_GameManger::BlockLoad()	// ºí·ÏÀ» ºÒ·¯¿À´Â Å° ÇÔ¼ö 
+void cl_GameManger::BlockLoad()	// ë¸”ë¡ì„ ë¶ˆëŸ¬ì˜¤ëŠ” í‚¤ í•¨ìˆ˜ 
 {
 	if(Saving == false)return;
 	eBlock_Turn = BT_0;
@@ -791,7 +791,7 @@ void cl_GameManger::BlockLoad()	// ºí·ÏÀ» ºÒ·¯¿À´Â Å° ÇÔ¼ö
 	
 	SetBlock(cThisBlock, iThisBlock, BT_0);
 	//BLOCK_SUB(cThisBlock, cSaveBlock);
-	MAP_SUB(cTempMap, cEndMap);	// ÇöÀç¸Ê¿¡ÀÖ´Â ºí·ÏÀ» ¾ø¿£´Ù. 
+	MAP_SUB(cTempMap, cEndMap);	// í˜„ì¬ë§µì—ìˆëŠ” ë¸”ë¡ì„ ì—†ì—”ë‹¤. 
 	
 	MAP_RESET(cThisBlockMap);
 	
@@ -799,97 +799,97 @@ void cl_GameManger::BlockLoad()	// ºí·ÏÀ» ºÒ·¯¿À´Â Å° ÇÔ¼ö
 	Saving = false;
 }
 
-void cl_GameManger::GamePause()	 // °ÔÀÓÀ» Á¤Áö½ÃÅ°´Â ÇÔ¼ö
+void cl_GameManger::GamePause()	 // ê²Œì„ì„ ì •ì§€ì‹œí‚¤ëŠ” í•¨ìˆ˜
 {
 	setcolor(7, 0);
-	gotoxy(7, 7);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
-	gotoxy(7, 8);	cout << "¡á                                            ¡á";
-	gotoxy(7, 9);	cout << "¡á         G A M E          P A U S E         ¡á";
-	gotoxy(7, 10);	cout << "¡á                                            ¡á";
-	gotoxy(7, 11);	cout << "¡á              - Press AnyKey -              ¡á";
-	gotoxy(7, 12);	cout << "¡á                                            ¡á";
-	gotoxy(7, 13);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
+	gotoxy(7, 7);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
+	gotoxy(7, 8);	cout << "â–                                             â– ";
+	gotoxy(7, 9);	cout << "â–          G A M E          P A U S E         â– ";
+	gotoxy(7, 10);	cout << "â–                                             â– ";
+	gotoxy(7, 11);	cout << "â–               - Press AnyKey -              â– ";
+	gotoxy(7, 12);	cout << "â–                                             â– ";
+	gotoxy(7, 13);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
 	getch();
 	
 	system("cls");
 	PauseCheck = true;
 	
-	OutPrintMap();			// ¸ÊÀçÃâ·Â 
+	OutPrintMap();			// ë§µì¬ì¶œë ¥ 
 	CheckingMap();
 	 
 	
 	PauseCheck = false;
 }
 
-void cl_GameManger::StageClear()	// ½ºÅ×ÀÌÁö Å¬¸®¾î 
+void cl_GameManger::StageClear()	// ìŠ¤í…Œì´ì§€ í´ë¦¬ì–´ 
 {
 	if(iStage < 5)
 	{
 		setcolor(11, 0);
-		gotoxy(7, 7);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
-		gotoxy(7, 8);	cout << "¡á                                            ¡á";
-		gotoxy(7, 9);	cout << "¡á        S T A G E " << iStage << "         C L E A R       ¡á";
-		gotoxy(7, 10);	cout << "¡á                                            ¡á";
-		gotoxy(7, 11);	cout << "¡á              - Press AnyKey -              ¡á";
-		gotoxy(7, 12);	cout << "¡á                                            ¡á";
-		gotoxy(7, 13);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
+		gotoxy(7, 7);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
+		gotoxy(7, 8);	cout << "â–                                             â– ";
+		gotoxy(7, 9);	cout << "â–         S T A G E " << iStage << "         C L E A R       â– ";
+		gotoxy(7, 10);	cout << "â–                                             â– ";
+		gotoxy(7, 11);	cout << "â–               - Press AnyKey -              â– ";
+		gotoxy(7, 12);	cout << "â–                                             â– ";
+		gotoxy(7, 13);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
 		getch();
 	}
 	else if(iStage == 5)
 	{
 		setcolor(11, 0);
-		gotoxy(7, 7);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
-		gotoxy(7, 8);	cout << "¡á                                            ¡á";
-		gotoxy(7, 9);	cout << "¡á      F I N A L  S T A G E  C L E A R       ¡á";
-		gotoxy(7, 10);	cout << "¡á                                            ¡á";
-		gotoxy(7, 11);	cout << "¡á              - Press AnyKey -              ¡á";
-		gotoxy(7, 12);	cout << "¡á                                            ¡á";
-		gotoxy(7, 13);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
+		gotoxy(7, 7);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
+		gotoxy(7, 8);	cout << "â–                                             â– ";
+		gotoxy(7, 9);	cout << "â–       F I N A L  S T A G E  C L E A R       â– ";
+		gotoxy(7, 10);	cout << "â–                                             â– ";
+		gotoxy(7, 11);	cout << "â–               - Press AnyKey -              â– ";
+		gotoxy(7, 12);	cout << "â–                                             â– ";
+		gotoxy(7, 13);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
 		getch();
 	}
 	
 	if(iStage < 4)
 	{
 		setcolor(10, 0);
-		gotoxy(7, 7);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
-		gotoxy(7, 8);	cout << "¡á                                            ¡á";
-		gotoxy(7, 9);	cout << "¡á        S T A G E " << iStage + 1<< "         S R A R T       ¡á";
-		gotoxy(7, 10);	cout << "¡á                                            ¡á";
-		gotoxy(7, 11);	cout << "¡á              - Press AnyKey -              ¡á";
-		gotoxy(7, 12);	cout << "¡á                                            ¡á";
-		gotoxy(7, 13);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
+		gotoxy(7, 7);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
+		gotoxy(7, 8);	cout << "â–                                             â– ";
+		gotoxy(7, 9);	cout << "â–         S T A G E " << iStage + 1<< "         S R A R T       â– ";
+		gotoxy(7, 10);	cout << "â–                                             â– ";
+		gotoxy(7, 11);	cout << "â–               - Press AnyKey -              â– ";
+		gotoxy(7, 12);	cout << "â–                                             â– ";
+		gotoxy(7, 13);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
 		getch();
 	}
 	else if(iStage == 4)
 	{
 		setcolor(10, 0);
-		gotoxy(7, 7);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
-		gotoxy(7, 8);	cout << "¡á                                            ¡á";
-		gotoxy(7, 9);	cout << "¡á      F I N A L  S T A G E  S T A R T       ¡á";
-		gotoxy(7, 10);	cout << "¡á                                            ¡á";
-		gotoxy(7, 11);	cout << "¡á              - Press AnyKey -              ¡á";
-		gotoxy(7, 12);	cout << "¡á                                            ¡á";
-		gotoxy(7, 13);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
+		gotoxy(7, 7);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
+		gotoxy(7, 8);	cout << "â–                                             â– ";
+		gotoxy(7, 9);	cout << "â–       F I N A L  S T A G E  S T A R T       â– ";
+		gotoxy(7, 10);	cout << "â–                                             â– ";
+		gotoxy(7, 11);	cout << "â–               - Press AnyKey -              â– ";
+		gotoxy(7, 12);	cout << "â–                                             â– ";
+		gotoxy(7, 13);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
 		getch();
 	}
 	setcolor(7, 0);	
 }
 
-void cl_GameManger::StageFail()	// ½ºÅ×ÀÌÁö ÆĞºñ
+void cl_GameManger::StageFail()	// ìŠ¤í…Œì´ì§€ íŒ¨ë¹„
 {
 	setcolor(12, 0);
-	gotoxy(7, 7);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
-	gotoxy(7, 8);	cout << "¡á                                            ¡á";
-	gotoxy(7, 9);	cout << "¡á         G A M E           O V E R          ¡á";
-	gotoxy(7, 10);	cout << "¡á                                            ¡á";
-	gotoxy(7, 11);	cout << "¡á              - Press AnyKey -              ¡á";
-	gotoxy(7, 12);	cout << "¡á                                            ¡á";
-	gotoxy(7, 13);	cout << "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á";
+	gotoxy(7, 7);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
+	gotoxy(7, 8);	cout << "â–                                             â– ";
+	gotoxy(7, 9);	cout << "â–          G A M E           O V E R          â– ";
+	gotoxy(7, 10);	cout << "â–                                             â– ";
+	gotoxy(7, 11);	cout << "â–               - Press AnyKey -              â– ";
+	gotoxy(7, 12);	cout << "â–                                             â– ";
+	gotoxy(7, 13);	cout << "â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– ";
 	getch();
 	setcolor(7, 0);
 }
 
-bool cl_GameManger::CheckingLine()	// Å×Æ®¸®½º ¶óÀÎÀ» Ã¼Å©ÇÏ´Â ÇÔ¼ö
+bool cl_GameManger::CheckingLine()	// í…ŒíŠ¸ë¦¬ìŠ¤ ë¼ì¸ì„ ì²´í¬í•˜ëŠ” í•¨ìˆ˜
 {
 	int Num = 0;
 	Num = 0;
@@ -905,17 +905,17 @@ bool cl_GameManger::CheckingLine()	// Å×Æ®¸®½º ¶óÀÎÀ» Ã¼Å©ÇÏ´Â ÇÔ¼ö
 				gotoxy(2, i - 3);
 				Num++;
 				if(Num > 3)
-					cout << "¡¡¡¡¡¡ TETRIS!¡¡¡¡¡¡";
+					cout << "ã€€ã€€ã€€ TETRIS!ã€€ã€€ã€€";
 				else
-					cout << "¡¡¡¡¡¡"<< Num << " COMBO!¡¡¡¡¡¡";
+					cout << "ã€€ã€€ã€€"<< Num << " COMBO!ã€€ã€€ã€€";
 				setcolor(7, 0);
-				for(int t = 0; t < 10; t++)	// ¶óÀÎ Å¬¸®¾î ´ë¸é ÇØ´ç ¶óÀÎÀ» ´Ù °ø¹éÀ¸·Î ¸¸µç´Ù 
+				for(int t = 0; t < 10; t++)	// ë¼ì¸ í´ë¦¬ì–´ ëŒ€ë©´ í•´ë‹¹ ë¼ì¸ì„ ë‹¤ ê³µë°±ìœ¼ë¡œ ë§Œë“ ë‹¤ 
 					cEndMap[i][t] = BC_NONE;
 			}
 		}
 	}
 	MAP_RESET(cEmpty);
-	if(Num > 0) 	// ¸¸¾à ¶óÀÎÀÌ ÇÏ³ªÀÌ»ó Å¬¸®¾î µÌÀ¸¸é
+	if(Num > 0) 	// ë§Œì•½ ë¼ì¸ì´ í•˜ë‚˜ì´ìƒ í´ë¦¬ì–´ ë«ìœ¼ë©´
 	{
 		bool StartLineCheck = false;
 		GetScore(Num);
@@ -955,7 +955,7 @@ void cl_GameManger::RePrintEndMap(const int Xpos, const int Ypos)
 	ColorBlockPrint(cEndMap[Ypos][Xpos]);
 }
 
-void cl_GameManger::GetScore(int iNum)	// ½ºÄÚ¾î¸¦ È×µæÇÏ´Â ÇÔ¼ö 
+void cl_GameManger::GetScore(int iNum)	// ìŠ¤ì½”ì–´ë¥¼ íœ™ë“í•˜ëŠ” í•¨ìˆ˜ 
 {
 	int iPlus = 0;;
 	switch(iNum)
@@ -976,7 +976,7 @@ void cl_GameManger::GetScore(int iNum)	// ½ºÄÚ¾î¸¦ È×µæÇÏ´Â ÇÔ¼ö
 	iScore += iPlus;
 }
 
-void cl_GameManger::StageDeficullty()	// ½ºÅ×ÀÌÁö ³­ÀÌµµ
+void cl_GameManger::StageDeficullty()	// ìŠ¤í…Œì´ì§€ ë‚œì´ë„
 {
 	switch(iStage)
 	{
@@ -998,23 +998,23 @@ void cl_GameManger::StageDeficullty()	// ½ºÅ×ÀÌÁö ³­ÀÌµµ
 	}
 }
 
-bool cl_GameManger::CheckEnding()	// °ÔÀÓ ¿£µù ÇÔ¼ö
+bool cl_GameManger::CheckEnding()	// ê²Œì„ ì—”ë”© í•¨ìˆ˜
 {
 	if(iStage > 5)
 	{
 		system("mode con cols=141 lines=19") ;
 		// YOU WIN
-		gotoxy(4,2);	cout <<	"¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á¡á¡á¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á";
-		gotoxy(4,3);	cout <<	"¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á¡á¡á¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡¡¡á¡á";
-		gotoxy(4,4);	cout <<	"¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡á¡á";
-		gotoxy(4,5);	cout <<	"¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡á¡á";
-		gotoxy(4,6);	cout << "¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡á¡á"; 
-		gotoxy(4,7);	cout << "¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡á¡á"; 
-		gotoxy(4,8); 	cout << "¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á";
-		gotoxy(4,9); 	cout << "¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡";
-		gotoxy(4,10);	cout << "¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡á¡á¡¡¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á";
-		gotoxy(4,11);	cout << "¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡¡¡¡¡¡¡á¡á¡á¡á¡á¡á¡¡¡á¡á¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡á¡á¡¡¡á¡á";
-		gotoxy(4,13);	cout << "¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡MADE BY GarryMilk¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡";
+		gotoxy(4,2);	cout <<	"â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€â– â– â– â– â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€â– â– ";
+		gotoxy(4,3);	cout <<	"â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€â– â– â– â– ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€â– â– ã€€â– â– â– â– â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€â– â– â– ã€€â– â– ";
+		gotoxy(4,4);	cout <<	"â– â– ã€€ã€€ã€€ã€€â– â– ã€€â– â– ã€€ã€€â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– â– â– ã€€â– â– ";
+		gotoxy(4,5);	cout <<	"ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€â– â– ã€€â– â– ";
+		gotoxy(4,6);	cout << "ã€€ã€€â– â– â– â– ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€â– â– "; 
+		gotoxy(4,7);	cout << "ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€â– â– "; 
+		gotoxy(4,8); 	cout << "ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€â– â– ";
+		gotoxy(4,9); 	cout << "ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€â– â– ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€";
+		gotoxy(4,10);	cout << "ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€â– â– â– â– ã€€ã€€ã€€ã€€â– â– â– â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– â– â– â– â– ã€€â– â– â– ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€â– â– ";
+		gotoxy(4,11);	cout << "ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€â– â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€ã€€ã€€ã€€â– â– â– â– â– â– ã€€â– â– ã€€ã€€ã€€ã€€ã€€ã€€ã€€â– â– ã€€â– â– ";
+		gotoxy(4,13);	cout << "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€MADE BY GarryMilkã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€";
 		getch();
 		return false;
 	}
@@ -1029,7 +1029,7 @@ void cl_GameManger::RESET()
 	return ;
 }
 
-bool cl_GameManger::RUN()	// °ÔÀÓÀ» ±¸µ¿ÇÏ´Â ÇÔ¼ö 
+bool cl_GameManger::RUN()	// ê²Œì„ì„ êµ¬ë™í•˜ëŠ” í•¨ìˆ˜ 
 {
 	unsigned char Key = 0;
 	StageDeficullty();
@@ -1037,13 +1037,13 @@ bool cl_GameManger::RUN()	// °ÔÀÓÀ» ±¸µ¿ÇÏ´Â ÇÔ¼ö
 	system("title TETRIS");
 	//OutPrintIntro();
 	OutPrintMap();
-	ChangeNextBlock();	// ´ÙÀ½ºí·ÏÀ» ÃÊ±âÈ­ÇÑ´Ù, Ã³À½¼±¾ğ½Ã Ã³À½ºí·Ï µµ ÃÊ±âÈ­µÊ 
+	ChangeNextBlock();	// ë‹¤ìŒë¸”ë¡ì„ ì´ˆê¸°í™”í•œë‹¤, ì²˜ìŒì„ ì–¸ì‹œ ì²˜ìŒë¸”ë¡ ë„ ì´ˆê¸°í™”ë¨ 
 	while(true)
 	{
-		if(bBlockCheck == false)	ChangeNextBlock();	// ÇöÀç ºí·ÏÀÌ ºñÈ°¼ºÈ­µÇ¸é ´ÙÀ½ºí·ÏÀ» ÀÔ·ÂÇÑ´Ù.
-		if(bBlockActive == false)	// ¸Ê¿¡ ¾ÆÁ÷ ÇöÀçºí·ÏÀÌ Ãâ·ÂµÇÁö ¾Ê¾ÑÀ¸¸é Ãâ·ÂÇØÁØ´Ù. 
+		if(bBlockCheck == false)	ChangeNextBlock();	// í˜„ì¬ ë¸”ë¡ì´ ë¹„í™œì„±í™”ë˜ë©´ ë‹¤ìŒë¸”ë¡ì„ ì…ë ¥í•œë‹¤.
+		if(bBlockActive == false)	// ë§µì— ì•„ì§ í˜„ì¬ë¸”ë¡ì´ ì¶œë ¥ë˜ì§€ ì•Šì•—ìœ¼ë©´ ì¶œë ¥í•´ì¤€ë‹¤. 
 		{
-			if(PrintBlock() == false) // ½ÃÀÛÄ­¿¡ ºí·ÏÀÌ ÀÖÀ¸¸é ÆĞ¹è 
+			if(PrintBlock() == false) // ì‹œì‘ì¹¸ì— ë¸”ë¡ì´ ìˆìœ¼ë©´ íŒ¨ë°° 
 			{
 				StageFail();
 				return false;
@@ -1059,7 +1059,7 @@ bool cl_GameManger::RUN()	// °ÔÀÓÀ» ±¸µ¿ÇÏ´Â ÇÔ¼ö
 			KeyInput(Key);
 			while(kbhit())getch();
 		}
-		if(CheckingMap() == true)	// Âü°ªÀ» º¸³»¸é Á¡¼ö·ÎÀÎÇÑ ½ºÅ×ÀÌÁö Å¬¸®¾î 
+		if(CheckingMap() == true)	// ì°¸ê°’ì„ ë³´ë‚´ë©´ ì ìˆ˜ë¡œì¸í•œ ìŠ¤í…Œì´ì§€ í´ë¦¬ì–´ 
 		{
 			StageClear();
 			iStage++;
@@ -1073,7 +1073,7 @@ bool cl_GameManger::RUN()	// °ÔÀÓÀ» ±¸µ¿ÇÏ´Â ÇÔ¼ö
 			bBlockActive = false;
 			DownKey = false;
 		}
-		else if(BlockDown() == false)	// ºí·ÏÀ» ÇÑÄ­ ³»¸®°í Ãæµ¹ÇÏ¸é 
+		else if(BlockDown() == false)	// ë¸”ë¡ì„ í•œì¹¸ ë‚´ë¦¬ê³  ì¶©ëŒí•˜ë©´ 
 		{
 			bBlockCheck = false; 
 			bBlockActive = false;
